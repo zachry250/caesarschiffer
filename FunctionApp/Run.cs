@@ -19,7 +19,7 @@ namespace FunctionApp
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             string result = null;
 
-            var logic = new Logic('\n', '\r');
+            var logic = new Logic('\r', '\n');
             RequestDTO requestDTO;
             try
             {

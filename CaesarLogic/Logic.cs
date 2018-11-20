@@ -29,9 +29,9 @@ namespace CaesarsLogic
                 {
                     result.Append(GetEncryptChar(positionsToMove, item));
                 }
-                result.Append(Environment.NewLine);
+                result.Append(_newLineChars);
             }
-            result.Remove(result.Length - 2, 1);
+            result.Remove(result.Length - (_newLineChars.Length), _newLineChars.Length);
             return result.ToString();
         }
 
@@ -45,9 +45,9 @@ namespace CaesarsLogic
                     result.Append(GetDecryptChar(positionsToMove, item));
 
                 }
-                result.Append(Environment.NewLine);
+                result.Append(_newLineChars);
             }
-            result.Remove(result.Length - 2, 1);
+            result.Remove(result.Length - (_newLineChars.Length), _newLineChars.Length);
             return result.ToString();
         }
 

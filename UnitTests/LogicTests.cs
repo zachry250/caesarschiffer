@@ -15,7 +15,7 @@ i had rather be first in a village than second at rome
 men freely believe that which they desire
 i came i saw i conquered";
 
-            var logic = new Logic('\n','\r');
+            var logic = new Logic('\r', '\n');
             var encryptedText = logic.GetEncryptString(7, plainText);
 
             var expectedText = @"lawlyplujlgpzgæolgælhjolygvmghssgæopunz
@@ -24,7 +24,7 @@ pgohkgyhæolygilgmpyzægpughgåpsshnlgæohugzljvukghægyvtl
 tlugmyllsbgilsplålgæohæg opjogæolbgklzpyl
 pgjhtlgpgzh gpgjvuxølylk";
 
-            Assert.Equal(expectedText, expectedText);
+            Assert.Equal(expectedText, encryptedText);
         }
     }
 }
